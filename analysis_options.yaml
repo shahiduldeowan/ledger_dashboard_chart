@@ -12,5 +12,13 @@ linter:
   rules:
     avoid_print: true
     prefer_single_quotes: true
+    use_super_parameters: true
+    camel_case_types: true
+    empty_statements: false
+    prefer_relative_imports: true
+    avoid_type_to_string: true
+    comment_references: true
+
+
 
 
