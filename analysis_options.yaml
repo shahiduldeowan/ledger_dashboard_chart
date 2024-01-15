@@ -1,0 +1,17 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - [build/**]
+  errors:
+    invalid_assignment: warning
+    missing_return: error
+    dead_code: info
+
+linter:
+  rules:
+    avoid_print: true
+    tab_size: 2
+    prefer_single_quotes: true
+
+
