@@ -10,7 +10,7 @@ import '../../../ledger/data/source/ledger_api_service.dart';
 import '../../../ledger/domain/entity/ledger_entity.dart';
 import '../../../ledger/domain/entity/ledger_request_entity.dart';
 import '../../domain/entity/overview_entity.dart';
-import '../../domain/repo/overview_repo.dart';
+import '../../domain/repo/ledger_overview_repo.dart';
 
 class LedgerOverviewRepoImpl implements LedgerOverviewRepo {
   LedgerOverviewRepoImpl(this._apiHandler, this._apiService);
