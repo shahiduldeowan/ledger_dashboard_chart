@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'configs/routes/app_router.dart';
+import 'features/ledger/presentation/page/ledger_page.dart';
+
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -10,8 +13,7 @@ class App extends StatelessWidget {
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         ),
-        home: Scaffold(
-          body: Container(),
-        ),
+        initialRoute: LedgerPage.routeName,
+        onGenerateRoute: AppRouter.onGenerateRoute,
       );
 }
