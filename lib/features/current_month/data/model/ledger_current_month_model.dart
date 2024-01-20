@@ -1,7 +1,7 @@
 import '../../domain/entity/current_month_entity.dart';
 
-class CurrentMonthModel extends CurrentMonthEntity {
-  const CurrentMonthModel({
+class LedgerCurrentMonthModel extends CurrentMonthEntity {
+  const LedgerCurrentMonthModel({
     super.year,
     super.month,
     super.bill,
@@ -10,7 +10,7 @@ class CurrentMonthModel extends CurrentMonthEntity {
     super.departmentName,
   });
 
-  factory CurrentMonthModel.fromJson(Map<String, dynamic> json) => CurrentMonthModel(
+  factory LedgerCurrentMonthModel.fromJson(Map<String, dynamic> json) => LedgerCurrentMonthModel(
         year: json['year'],
         month: json['month'],
         bill: json['bill'],
