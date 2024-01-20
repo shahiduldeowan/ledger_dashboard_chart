@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-abstract class LedgerEntity extends Equatable {
+class LedgerEntity extends Equatable {
   final String? userType;
   final String? orgUserId;
   final String? sysUserId;
