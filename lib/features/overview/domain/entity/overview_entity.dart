@@ -8,4 +8,17 @@ class OverviewEntity extends LedgerEntity with LedgerBalanceService {
     super.payableAmount,
     super.creditLimit,
   });
+
+  OverviewEntity copyWith({
+    double? bill,
+    double? balance,
+    double? payableAmount,
+    double? creditLimit,
+  }) =>
+      OverviewEntity(
+        bill: bill ?? this.bill,
+        balance: balance ?? this.balance,
+        payableAmount: payableAmount ?? this.payableAmount,
+        creditLimit: creditLimit ?? this.creditLimit,
+      );
 }
