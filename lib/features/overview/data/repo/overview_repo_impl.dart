@@ -90,7 +90,7 @@ class OverviewRepoImpl implements OverviewRepo {
 
   Future<LedgerEntity?> _getCurrentMonthUses() async {
     final now = DateTime.now();
-    final requestBody = LedgerRequestEntity(fromDate: now.fastDayOfTheMonth, toDate: now.lastDayOfTheMonth);
+    final requestBody = LedgerRequestEntity(fromDate: now.firstDayOfTheMonth, toDate: now.lastDayOfTheMonth);
 
     return _getResult(
       () => _apiService.getCurrentMonthUsesLedger(
