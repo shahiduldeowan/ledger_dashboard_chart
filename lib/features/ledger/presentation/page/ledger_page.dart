@@ -5,6 +5,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 class LedgerPage extends HookWidget {
   const LedgerPage({super.key});
 
+  static const String routeName = '/';
+
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
