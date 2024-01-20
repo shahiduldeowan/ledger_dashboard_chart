@@ -19,4 +19,21 @@ class LedgerCurrentMonthEntity extends LedgerEntity with LedgerDebitCreditServic
         departmentKey: entity.departmentKey,
         departmentName: entity.departmentName,
       );
+
+  LedgerCurrentMonthEntity copyWith({
+    int? year,
+    int? month,
+    double? bill,
+    double? balance,
+    int? departmentKey,
+    String? departmentName,
+  }) =>
+      LedgerCurrentMonthEntity(
+        year: year ?? this.year,
+        month: month ?? this.month,
+        bill: bill ?? this.bill,
+        balance: balance ?? this.balance,
+        departmentKey: departmentKey ?? this.departmentKey,
+        departmentName: departmentName ?? this.departmentName,
+      );
 }
