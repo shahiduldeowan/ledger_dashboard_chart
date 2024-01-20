@@ -1,8 +1,8 @@
 import '../../../ledger/domain/entity/ledger_entity.dart';
 import '../../../ledger/domain/ledger_debit_credit_service.dart';
 
-class CurrentMonthEntity extends LedgerEntity with LedgerDebitCreditService {
-  const CurrentMonthEntity({
+class LedgerCurrentMonthEntity extends LedgerEntity with LedgerDebitCreditService {
+  const LedgerCurrentMonthEntity({
     super.year,
     super.month,
     super.bill,
@@ -10,4 +10,13 @@ class CurrentMonthEntity extends LedgerEntity with LedgerDebitCreditService {
     super.departmentKey,
     super.departmentName,
   });
+
+  factory LedgerCurrentMonthEntity.fromLedgerEntity(LedgerEntity entity) => LedgerCurrentMonthEntity(
+        year: entity.year,
+        month: entity.month,
+        bill: entity.bill,
+        balance: entity.balance,
+        departmentKey: entity.departmentKey,
+        departmentName: entity.departmentName,
+      );
 }
