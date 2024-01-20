@@ -1,3 +1,3 @@
 class Strings {
-  static const String ledgerDashboard = 'Ledger Dashboard';
+  static const String ledgerDashboardTitle = 'Ledger Dashboard';
 }
