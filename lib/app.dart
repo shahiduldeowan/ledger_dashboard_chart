@@ -10,6 +10,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
         title: 'Ledger Dashboard Chart',
+        debugShowCheckedModeBanner: false,
         themeMode: ThemeMode.dark,
         darkTheme: appDarkTheme,
         initialRoute: LedgerPage.routeName,
