@@ -1,12 +1,12 @@
 import '../../../../core/resources/data_state.dart';
 import '../../../../core/use_case/use_case.dart';
 import '../entity/overview_entity.dart';
-import '../repo/overview_repo.dart';
+import '../repo/ledger_overview_repo.dart';
 
-class OverviewUseCase extends UseCase<DataState<OverviewEntity>, void> {
-  OverviewUseCase(this._overviewRepo);
+class LedgerOverviewUseCase extends UseCase<DataState<OverviewEntity>, void> {
+  LedgerOverviewUseCase(this._overviewRepo);
 
-  final OverviewRepo _overviewRepo;
+  final LedgerOverviewRepo _overviewRepo;
 
   @override
   Future<DataState<OverviewEntity>> call({void param}) {
