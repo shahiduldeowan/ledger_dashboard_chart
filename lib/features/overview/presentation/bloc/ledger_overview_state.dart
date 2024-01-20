@@ -3,7 +3,7 @@ part of 'ledger_overview_bloc.dart';
 class LedgerOverviewState extends Equatable {
   const LedgerOverviewState({this.overview});
 
-  final OverviewEntity? overview;
+  final LedgerOverviewEntity? overview;
 
   @override
   List<Object?> get props => [overview];
@@ -20,7 +20,7 @@ class LedgerOverviewFailedState extends LedgerOverviewState {
 class LedgerOverviewLoadedState extends LedgerOverviewState {
   const LedgerOverviewLoadedState({required super.overview});
 
-  LedgerOverviewLoadedState copyWith({OverviewEntity? overview}) {
+  LedgerOverviewLoadedState copyWith({LedgerOverviewEntity? overview}) {
     return LedgerOverviewLoadedState(
       overview: overview ?? this.overview,
     );

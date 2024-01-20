@@ -9,7 +9,7 @@ import '../../../ledger/data/model/ledger_request_model.dart';
 import '../../../ledger/data/source/ledger_api_service.dart';
 import '../../../ledger/domain/entity/ledger_entity.dart';
 import '../../../ledger/domain/entity/ledger_request_entity.dart';
-import '../../domain/entity/overview_entity.dart';
+import '../../domain/entity/ledger_overview_entity.dart';
 import '../../domain/repo/ledger_overview_repo.dart';
 
 class LedgerOverviewRepoImpl implements LedgerOverviewRepo {
@@ -19,14 +19,14 @@ class LedgerOverviewRepoImpl implements LedgerOverviewRepo {
   final LedgerApiService _apiService;
 
   @override
-  Future<DataState<OverviewEntity>> getOverview() async {
+  Future<DataState<LedgerOverviewEntity>> getOverview() async {
     final previousMonth = await _getPreviousMonthLedger();
     final currentMonth = await _getCurrentMonthLedger();
     final currentMonthUses = await _getCurrentMonthUses();
 
     if (previousMonth != null || currentMonth != null) {
       return DataSuccess(
-        data: OverviewEntity(
+        data: LedgerOverviewEntity(
           creditLimit: currentMonth?.creditLimit, // Current month credit limit
           payableAmount: currentMonth?.payableAmount, // Total due
           bill: previousMonth?.payableAmount, // Previous month due

@@ -1,21 +1,21 @@
 import '../../../ledger/domain/entity/ledger_entity.dart';
 import '../../../ledger/domain/ledger_balance_service.dart';
 
-class OverviewEntity extends LedgerEntity with LedgerBalanceService {
-  const OverviewEntity({
+class LedgerOverviewEntity extends LedgerEntity with LedgerBalanceService {
+  const LedgerOverviewEntity({
     super.bill,
     super.balance,
     super.payableAmount,
     super.creditLimit,
   });
 
-  OverviewEntity copyWith({
+  LedgerOverviewEntity copyWith({
     double? bill,
     double? balance,
     double? payableAmount,
     double? creditLimit,
   }) =>
-      OverviewEntity(
+      LedgerOverviewEntity(
         bill: bill ?? this.bill,
         balance: balance ?? this.balance,
         payableAmount: payableAmount ?? this.payableAmount,

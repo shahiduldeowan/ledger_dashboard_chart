@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/resources/data_state.dart';
-import '../../domain/entity/overview_entity.dart';
+import '../../domain/entity/ledger_overview_entity.dart';
 import '../../domain/use_case/ledger_overview_use_case.dart';
 
 part 'ledger_overview_event.dart';
