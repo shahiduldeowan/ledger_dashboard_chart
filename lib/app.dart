@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'configs/routes/app_router.dart';
+import 'configs/themes/app_dark_theme.dart';
 import 'features/ledger/presentation/page/ledger_page.dart';
 
 class App extends StatelessWidget {
@@ -9,10 +10,8 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
         title: 'Ledger Dashboard Chart',
-        theme: ThemeData(
-          useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        ),
+        themeMode: ThemeMode.dark,
+        darkTheme: appDarkTheme,
         initialRoute: LedgerPage.routeName,
         onGenerateRoute: AppRouter.onGenerateRoute,
       );
