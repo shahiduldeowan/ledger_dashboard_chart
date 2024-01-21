@@ -6,4 +6,6 @@ mixin LedgerDebitCreditService on LedgerEntity {
   ///
   /// Consider using a configuration or a more flexible approach.
   bool get isCredit => (departmentKey ?? 0) == Strings.creditKey;
+
+  String get getCreditDebitFlag => isCredit ? Strings.creditFlag : Strings.debitFlag;
 }
