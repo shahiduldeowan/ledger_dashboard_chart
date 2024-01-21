@@ -15,8 +15,8 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MultiBlocProvider(
         providers: [
-          BlocProvider(create: (context) => getIt<LedgerOverviewBloc>()..add(const GetLedgerOverviewEvent())),
-          BlocProvider(create: (context) => getIt<LedgerCurrentMonthBloc>()..add(const GetLedgerCurrentMonthEvent())),
+          BlocProvider(create: (overviewContext) => getIt<LedgerOverviewBloc>()..add(const GetLedgerOverviewEvent())),
+          BlocProvider(create: (currentMonthContext) => getIt<LedgerCurrentMonthBloc>()..add(const GetLedgerCurrentMonthEvent())),
         ],
         child: MaterialApp(
           title: Strings.appTitle,
