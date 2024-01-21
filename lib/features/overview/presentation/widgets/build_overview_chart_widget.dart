@@ -31,7 +31,7 @@ class BuildOverviewChart extends StatelessWidget {
                       strokeCap: StrokeCap.round,
                       strokeWidth: 8,
                       backgroundColor: Colors.white12,
-                      color: null,
+                      color: overview.isRemainBalanceWarning ? Colors.red.shade600 : null,
                     ),
                   ),
                 ),
