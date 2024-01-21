@@ -13,7 +13,7 @@ class BuildOverviewChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 16 / 9,
+      aspectRatio: 16 / 7,
       child: Card(
         child: Padding(
           padding: const EdgeInsets.all(AppSizes.cardContentPadding),
