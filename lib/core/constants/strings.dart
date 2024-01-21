@@ -8,4 +8,6 @@ class Strings {
   static const String creditLimit = 'Credit Limit';
   static const String currentUses = 'Current Uses';
   static const String monthlyInsight = 'Monthly Insights';
+  static const String creditFlag = 'Cr.';
+  static const String debitFlag = 'Dr.';
 }
