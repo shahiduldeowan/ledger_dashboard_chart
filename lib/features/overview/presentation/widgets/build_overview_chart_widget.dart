@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/constants/app_sizes.dart';
 import '../../domain/entity/ledger_overview_entity.dart';
+import 'build_remain_chart_indicator.dart';
 
 class BuildOverviewChart extends StatelessWidget {
-  const BuildOverviewChart({super.key, required this.overview});
+  const BuildOverviewChart({super.key, required this.overviewBalance});
 
-  final LedgerOverviewEntity overview;
+  final LedgerOverviewEntity overviewBalance;
 
   @override
   Widget build(BuildContext context) {
@@ -21,21 +22,7 @@ class BuildOverviewChart extends StatelessWidget {
               const Spacer(
                 flex: 2,
               ),
-              Expanded(
-                child: Center(
-                  child: FractionallySizedBox(
-                    heightFactor: 0.65,
-                    widthFactor: 1,
-                    child: CircularProgressIndicator(
-                      value: overview.getRemainWithPercent,
-                      strokeCap: StrokeCap.round,
-                      strokeWidth: 8,
-                      backgroundColor: Colors.white12,
-                      color: overview.isRemainBalanceWarning ? Colors.red.shade600 : null,
-                    ),
-                  ),
-                ),
-              ),
+              BuildRemainChartIndicator(overviewBalance: overviewBalance)
             ],
           ),
         ),
