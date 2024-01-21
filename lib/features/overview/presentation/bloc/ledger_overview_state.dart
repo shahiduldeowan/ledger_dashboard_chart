@@ -1,12 +1,12 @@
 part of 'ledger_overview_bloc.dart';
 
 class LedgerOverviewState extends Equatable {
-  const LedgerOverviewState({this.overview});
+  const LedgerOverviewState({this.overviewBalance});
 
-  final LedgerOverviewEntity? overview;
+  final LedgerOverviewEntity? overviewBalance;
 
   @override
-  List<Object?> get props => [overview];
+  List<Object?> get props => [overviewBalance];
 }
 
 class LedgerOverviewLoadingState extends LedgerOverviewState {
@@ -18,11 +18,11 @@ class LedgerOverviewFailedState extends LedgerOverviewState {
 }
 
 class LedgerOverviewLoadedState extends LedgerOverviewState {
-  const LedgerOverviewLoadedState({required super.overview});
+  const LedgerOverviewLoadedState({required super.overviewBalance});
 
-  LedgerOverviewLoadedState copyWith({LedgerOverviewEntity? overview}) {
+  LedgerOverviewLoadedState copyWith({LedgerOverviewEntity? overviewBalance}) {
     return LedgerOverviewLoadedState(
-      overview: overview ?? this.overview,
+      overviewBalance: overviewBalance ?? this.overviewBalance,
     );
   }
 }

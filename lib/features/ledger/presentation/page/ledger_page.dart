@@ -29,7 +29,7 @@ class LedgerPage extends HookWidget {
         },
         builder: (context, overviewState) => switch (overviewState) {
           LedgerOverviewFailedState() => _buildEmptyWidget(),
-          LedgerOverviewLoadedState(overview: var overview) => _buildScaffoldBody(context, overview!),
+          LedgerOverviewLoadedState(overviewBalance: var overviewBalance) => _buildScaffoldBody(context, overviewBalance!),
           _ => buildProgressIndicatorWidget(),
         },
       ),
@@ -51,13 +51,13 @@ class LedgerPage extends HookWidget {
         ),
       );
 
-  RefreshIndicator _buildScaffoldBody(BuildContext context, LedgerOverviewEntity overview) {
+  RefreshIndicator _buildScaffoldBody(BuildContext context, LedgerOverviewEntity overviewBalance) {
     return RefreshIndicator.adaptive(
       onRefresh: () => _refreshHandler(context),
       child: ListView(
         padding: const EdgeInsets.all(AppSizes.padding),
         children: [
-          BuildOverviewChart(overview: overview),
+          BuildOverviewChart(overviewBalance: overviewBalance),
         ],
       ),
     );

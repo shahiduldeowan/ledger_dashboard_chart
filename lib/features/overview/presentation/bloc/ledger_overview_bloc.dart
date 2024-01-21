@@ -17,12 +17,12 @@ class LedgerOverviewBloc extends Bloc<LedgerOverviewEvent, LedgerOverviewState> 
 
       if (result is DataSuccess) {
         if (result is! LedgerOverviewLoadedState) {
-          emit(LedgerOverviewLoadedState(overview: result.data!));
+          emit(LedgerOverviewLoadedState(overviewBalance: result.data!));
           return;
         }
 
         final currentState = state as LedgerOverviewLoadedState;
-        emit(currentState.copyWith(overview: result.data!));
+        emit(currentState.copyWith(overviewBalance: result.data!));
         return;
       }
 
