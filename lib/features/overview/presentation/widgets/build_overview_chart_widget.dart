@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/constants/app_sizes.dart';
 import '../../domain/entity/ledger_overview_entity.dart';
+import 'build_overview_balance_text_widget.dart';
 import 'build_remain_chart_indicator.dart';
 
 class BuildOverviewChart extends StatelessWidget {
@@ -19,10 +20,8 @@ class BuildOverviewChart extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Spacer(
-                flex: 2,
-              ),
-              BuildRemainChartIndicator(overviewBalance: overviewBalance)
+              BuildOverviewBalanceTextWidget(overviewBalance: overviewBalance),
+              BuildRemainChartIndicator(overviewBalance: overviewBalance),
             ],
           ),
         ),
