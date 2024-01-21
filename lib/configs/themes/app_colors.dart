@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+const Color debitFontColor = Colors.white;
+const Color creditFontColor = Colors.green;
+
 const darkColorScheme = ColorScheme(
   brightness: Brightness.dark,
   primary: Color(0xFFA3C9FF),
