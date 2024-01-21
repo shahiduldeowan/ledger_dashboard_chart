@@ -90,7 +90,7 @@ class BuildOverviewBalanceTextWidget extends StatelessWidget {
           ),
         ),
         FractionallySizedBox(
-          widthFactor: 0.95,
+          widthFactor: 0.9,
           child: LinearProgressIndicator(
             value: overviewBalance.expenseWithPercent,
             color: Colors.red.shade600,
