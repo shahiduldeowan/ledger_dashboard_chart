@@ -7,4 +7,5 @@ class Strings {
   static const String totalDue = 'Total Due';
   static const String creditLimit = 'Credit Limit';
   static const String currentUses = 'Current Uses';
+  static const String monthlyInsight = 'Monthly Insights';
 }
