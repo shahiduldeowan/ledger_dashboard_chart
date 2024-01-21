@@ -37,4 +37,9 @@ mixin LedgerBalanceService on LedgerEntity {
       return 0.0;
     }
   }
+
+  /// Remain balance indicate
+  ///
+  /// Available balance is less than 20% of credit limit then return `true` or `false`
+  bool get isRemainBalanceWarning => getRemainWithPercent < 0.2;
 }
