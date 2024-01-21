@@ -16,7 +16,7 @@ class LedgerCurrentMonthBloc extends Bloc<LedgerCurrentMonthEvent, LedgerCurrent
       final response = await _ledgerCurrentMonthUseCase();
 
       if (response is DataSuccess) {
-        if (state is! LedgerCurrentMonthLoadedState) {
+        if (state is LedgerCurrentMonthLoadedState) {
           final currentState = state as LedgerCurrentMonthLoadedState;
           emit(currentState.copyWith(details: response.data));
           return;
