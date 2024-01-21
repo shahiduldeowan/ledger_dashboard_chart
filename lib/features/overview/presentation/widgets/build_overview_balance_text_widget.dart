@@ -17,18 +17,60 @@ class BuildOverviewBalanceTextWidget extends StatelessWidget {
       flex: 2,
       child: Container(
         margin: const EdgeInsets.only(right: AppSizes.cardContentPadding),
-        decoration: BoxDecoration(border: Border.all()),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             _buildTotalDueBalance(context),
-            // Expanded(
-            //     child: Container(
-            //   color: Colors.blue,
-            // )),
+            _buildFooter(context),
           ],
         ),
       ),
+    );
+  }
+
+  Row _buildFooter(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(
+          child: Container(
+            margin: const EdgeInsets.only(right: AppSizes.cardContentPadding),
+            child: _titleWithBalance(
+              context,
+              Strings.creditLimit,
+              overviewBalance.getCreditLimit,
+            ),
+          ),
+        ),
+        Expanded(
+          child: _titleWithBalance(
+            context,
+            Strings.currentUses,
+            overviewBalance.getCurrentMonthBalance,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Column _titleWithBalance(BuildContext context, String title, double balance) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        SectionTitleWidget(title: title),
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            balance.toFormatOfPrice,
+            style: TextStyle(
+              fontSize: MediaQuery.of(context).textScaler.scale(16),
+              fontWeight: FontWeight.w900,
+            ),
+          ),
+        ),
+      ],
     );
   }
 
