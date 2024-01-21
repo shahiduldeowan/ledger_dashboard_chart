@@ -59,6 +59,7 @@ class LedgerPage extends HookWidget {
         padding: const EdgeInsets.all(AppSizes.padding),
         children: [
           BuildOverviewChart(overviewBalance: overviewBalance),
+          const SizedBox(height: AppSizes.padding),
           const BuildCurrentMonthInsights(),
         ],
       ),
