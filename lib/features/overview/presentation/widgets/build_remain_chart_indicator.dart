@@ -70,7 +70,7 @@ class BuildRemainChartIndicator extends StatelessWidget {
 
   FractionallySizedBox _buildCircularIndicator() {
     return FractionallySizedBox(
-      heightFactor: 0.65,
+      heightFactor: 0.85,
       widthFactor: 1,
       child: CircularProgressIndicator(
         value: overviewBalance.getRemainWithPercent,
