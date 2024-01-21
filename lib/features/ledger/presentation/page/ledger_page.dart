@@ -7,6 +7,7 @@ import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/strings.dart';
 import '../../../../core/utility/build_progress_indicator_widget.dart';
 import '../../../current_month/presentation/bloc/ledger_current_month_bloc.dart';
+import '../../../current_month/presentation/widgets/build_current_month_insights.dart';
 import '../../../overview/domain/entity/ledger_overview_entity.dart';
 import '../../../overview/presentation/bloc/ledger_overview_bloc.dart';
 import '../../../overview/presentation/widgets/build_overview_chart_widget.dart';
@@ -58,6 +59,7 @@ class LedgerPage extends HookWidget {
         padding: const EdgeInsets.all(AppSizes.padding),
         children: [
           BuildOverviewChart(overviewBalance: overviewBalance),
+          const BuildCurrentMonthInsights(),
         ],
       ),
     );
